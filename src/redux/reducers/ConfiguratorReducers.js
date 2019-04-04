@@ -4,14 +4,14 @@ export function getContent(state = { isSubmitting: false }, action) {
     let newState = Object.assign({}, state, {})
 
     switch (action.type) {
-        case configuratorConstants.GET_HEADER_REQUEST:
+        case configuratorConstants.GET_CONFIGURATOR_REQUEST:
             newState["isSubmitting"] = true
             return newState
-        case configuratorConstants.GET_HEADER_SUCCESS:
+        case configuratorConstants.GET_CONFIGURATOR_SUCCESS:
             newState["isSubmitting"] = false
             newState = { ...action.response }
             return newState
-        case configuratorConstants.UPLOAD_FAILURE:
+        case configuratorConstants.GET_CONFIGURATOR_FAILURE:
             newState["isSubmitting"] = false
             return newState
         default:

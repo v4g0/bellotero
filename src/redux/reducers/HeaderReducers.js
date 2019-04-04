@@ -11,7 +11,7 @@ export function getHeader(state = { isSubmitting: false }, action) {
             newState["isSubmitting"] = false
             newState = { ...action.response }
             return newState
-        case headerConstants.UPLOAD_FAILURE:
+        case headerConstants.GET_HEADER_FAILURE:
             newState["isSubmitting"] = false
             return newState
         default:

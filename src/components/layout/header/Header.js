@@ -9,13 +9,13 @@ class Header extends React.PureComponent {
         const { dispatch } = this.props
         dispatch(headerActions.getHeader())
     }
-
+    
     render() {
-        const { menu } = this.props.getHeader
+        const { getHeader, location } = this.props
         return (
-            menu != undefined
+            getHeader.menu != undefined
                 ?
-                <HeaderItem items={menu.items} />
+                <HeaderItem items={getHeader.menu.items} location={location} />
                 :
                 null
         )
@@ -23,10 +23,11 @@ class Header extends React.PureComponent {
 }
 
 function mapStateToProps(state) {
-    const getHeader = state.getHeader;
     return {
-        getHeader
+        getHeader: state.getHeader,
+        location: state.router.location,
     };
 }
 
 export default connect(mapStateToProps)(Header)
+

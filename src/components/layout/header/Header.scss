@@ -1,12 +1,16 @@
 @import '../Layout.scss';
 nav{
-    height: $header-height;
+    min-height: $header-height;
 
     .nav-item{
-        border-top: 5px solid;
         font-weight: bold;
         display: flex;
         align-items: center;
+        text-decoration: none;
+
+        &.sel-border{
+            border-top: 5px solid;
+        }
     }
 
     .logo {
