@@ -1,0 +1,17 @@
+@import '../Layout.scss';
+nav{
+    height: $header-height;
+
+    .nav-item{
+        border-top: 5px solid;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        width: 133px;
+        height: 26px;
+        object-fit: contain;
+    }
+}

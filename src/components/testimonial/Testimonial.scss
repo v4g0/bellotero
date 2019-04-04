@@ -1,0 +1,26 @@
+$control-height: 56px;
+
+.testimonial{
+    #slider{
+        width:  calc(100% - 92px);
+        .controls{
+            position: absolute;
+            height: $control-height;
+            right: -92px;
+            bottom: -28px;    
+            
+            .counter{
+                width: 120px;
+                height: 100%;
+            }
+              
+            .control{
+                width: $control-height;
+                height: 100%;
+                text-decoration: none;
+            }
+          
+        }
+    }
+
+}

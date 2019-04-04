@@ -1,0 +1,5 @@
+$header-height: 65px;
+
+.base{
+    height: calc(100vh - #{$header-height});
+}

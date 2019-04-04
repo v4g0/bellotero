@@ -1,0 +1,9 @@
+$colors: (
+    'dark-blue'  :#071eb3,
+    'blue-zodiac' :#F9FAFF,
+);
+
+$theme-colors: ();
+$theme-colors: map-merge($theme-colors, $colors);
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
