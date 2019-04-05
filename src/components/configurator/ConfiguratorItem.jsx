@@ -7,19 +7,21 @@ import Fade from 'react-reveal/Fade';
 import './Configurator.scss';
 
 export default function ConfiguratorItem(props) {
+
   return (
-    <Fade top>
-      <div className="row align-items-center justify-content-between">
-        <div className="col-5 d-flex flex-column">
+
+    <Fade bottom>
+      <div className="row w-100 justify-content-between my-4 my-lg-auto">
+        <div className="col-md-12 col-lg-5  d-flex flex-column px-">
           <span className="bg-dark-blue text-white h1 p-2 text-left"> <b>{props.content.title}</b></span>
           <span className="text-left">{props.content.description}</span>
         </div>
-        <div className="col-7 col-lg-6">
+        <div className="col-md-12 col-lg-6 mt-4 mt-lg-0">
           <div className="form-group row justify-content-between">
-            <label className="col-4 text-left" htmlFor="customRange1"><b>Monthly ingredient spending</b></label>
+            <label className="col-5 col-md-4 text-left" htmlFor="customRange1"><b>Monthly ingredient spending</b></label>
             <TextField
               name="mtText"
-              className="col-6 amount"
+              className="col-7 amount"
               variant="outlined"
               value={props.mtText}
               onChange={props.handleTextChange}
@@ -36,7 +38,7 @@ export default function ConfiguratorItem(props) {
             />
           </div>
           <div class="form-group row justify-content-between">
-            <label className="col-4 text-left" htmlFor="customRange1"><b>Full-time employees that process invoices</b></label>
+            <label className="col-7 col-md-4 text-left" htmlFor="customRange1"><b>Full-time employees that process invoices</b></label>
             <TextField
               name="ftText"
               className="col-3 amount"
@@ -54,20 +56,30 @@ export default function ConfiguratorItem(props) {
               className="custom-range col-12 mt-5"
               onChange={props.handleFtSliderChange}
             />
-            <div className="col-12 d-flex justify-content-between mt-3">
-              <span className="text-dark-blue">
-                <span className="display-4"><b>$</b></span>
-                <span className="display-3"><b>{props.eCostFoodSvng.toFixed(3)}</b></span>
-              </span>
-              <span className="text-dark-blue">
-                <span className="display-4"><b>$</b></span>
-                <span className="display-3"><b>{props.eYearSvng.toFixed(3)}</b></span>
-              </span>
+            <div className="col-12 d-flex justify-content-between my-3">
+              <div className="row w-100">
+                <div className="col-12 col-md-6 d-flex flex-column">
+                  <span className="text-dark-blue">
+                    <span className="h2"><b>$</b></span>
+                    <span className="display-4"><b>{props.eCostFoodSvng.toFixed(3)}</b></span>
+                  </span>
+                  <span>Estimated food cost savings</span>
+                </div>
+                <div className="col-12 col-md-6 d-flex flex-column">
+                  <span className="text-dark-blue">
+                    <span className="h2"><b>$</b></span>
+                    <span className="display-4"><b>{props.eYearSvng.toFixed(3)}</b></span>
+                  </span>
+                  <span>You estimated anual savings</span>
+                </div>
+              </div>
+
             </div>
 
           </div>
         </div>
       </div>
     </Fade>
+
   )
 }

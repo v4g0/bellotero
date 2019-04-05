@@ -1,5 +1,8 @@
 $header-height: 65px;
 
 .base{
-    height: calc(100vh - #{$header-height});
+    height: calc(100% - #{$header-height});    
+    overflow-y: auto;
+    overflow-x: hidden;
+
 }

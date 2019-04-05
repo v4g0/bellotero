@@ -6,8 +6,8 @@ import Configurator from '../configurator/Configurator'
 
 export default function Base(props) {
     return (
-        <div className="row justify-content-center bg-blue-zodiac">
-            <div className="col-9 base d-flex align-items-center justify-content-center " >
+        <div className="row justify-content-center bg-blue-zodiac base">
+            <div className="col-11 col-md-10 col-xl-9  d-flex justify-content-center " >
                 {props.children}
             </div>
         </div>

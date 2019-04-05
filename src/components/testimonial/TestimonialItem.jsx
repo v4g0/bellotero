@@ -4,8 +4,8 @@ import './Testimonial.scss';
 
 export default function TestimonialItem(props) {
     return (
-        <Fade top>
-            <div className="testimonial w-100">
+        <Fade left>
+            <div className="testimonial w-100 my-4 my-md-auto">
                 <div className="d-flex">
                     <span className="bg-dark-blue text-white h1 p-2 text-center"> <b>{props.slider.title}</b></span>
                 </div>
@@ -17,11 +17,11 @@ export default function TestimonialItem(props) {
                                 return (
                                     <div className={"carousel-item " + (index == 0 ? "active" : "")} data-interval="false" key={"sl-" + index}>
                                         <div className="row py-3">
-                                            <div className="col-5 d-flex flex-column align-items-start">
+                                            <div className="col-12 col-md-5 d-flex flex-column align-items-start mb-md-0 mb-4">
                                                 <span className="h2"><b>{elm.name}</b></span>
                                                 <span className="small">{elm.position}</span>
                                             </div>
-                                            <div className="col-7 text-left">
+                                            <div className="col-12 col-md-7 text-left">
                                                 <span className="h4"><b>"{elm.comment}"</b></span>
                                             </div>
                                         </div>

@@ -2,12 +2,25 @@ $control-height: 56px;
 
 .testimonial{
     #slider{
-        width:  calc(100% - 92px);
+        width: 100%;
+        margin-bottom: $control-height + $control-height / 2 ;   
+
+        @media (min-width: 768px) { 
+            width:  calc(100% - 92px); 
+            margin-bottom: $control-height / 2;                                        
+        } 
+
         .controls{
             position: absolute;
             height: $control-height;
-            right: -92px;
-            bottom: -28px;    
+            right: 0px;
+            bottom: -$control-height;
+            
+
+            @media (min-width: 768px) { 
+                right: -92px;  
+                bottom: -$control-height / 2;                            
+            }             
             
             .counter{
                 width: 120px;

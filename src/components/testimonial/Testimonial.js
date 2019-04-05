@@ -3,6 +3,7 @@ import TestimonialItem from './TestimonialItem';
 import { connect } from 'react-redux';
 import testimonialActions from '../../redux/actions/TestimonialActions';
 import $ from "jquery"
+import MoonLoader from 'react-spinners/ClipLoader';
 
 class Testimonial extends React.PureComponent {
     state = {
@@ -15,12 +16,12 @@ class Testimonial extends React.PureComponent {
     }
 
     onSlideChange() {
-        
-        var timeOut = setTimeout(()=>{
+
+        var timeOut = setTimeout(() => {
             this.setState({ currentSld: $('.carousel-item.active').index() + 1 })
             clearTimeout(timeOut)
-        },900)
-        
+        }, 900)
+
     }
 
     render() {
@@ -31,7 +32,9 @@ class Testimonial extends React.PureComponent {
                 ?
                 <TestimonialItem slider={slider} currentSld={currentSld} onSlideChange={() => this.onSlideChange()} />
                 :
-                null
+                <div className="h-100 w-100 d-flex align-items-center justify-content-center">
+                    <MoonLoader sizeUnit={"px"} size={60} color={'#071eb3'} />
+                </div>
         )
     }
 }

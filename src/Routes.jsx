@@ -13,7 +13,7 @@ const mapStateToProps = (state) => {
     }
 };
 
-const Routes = ({ location, loggedIn, heads }) => {
+const Routes = ({ location }) => {
     return (
         <Base>
             <Switch location={location}>

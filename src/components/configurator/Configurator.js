@@ -2,6 +2,7 @@ import React from 'react';
 import ConfiguratorItem from './ConfiguratorItem';
 import { connect } from 'react-redux';
 import configuratorActions from '../../redux/actions/ConfiguratorActions';
+import MoonLoader from 'react-spinners/ClipLoader';
 
 class Configurator extends React.PureComponent {
     state = {
@@ -32,7 +33,7 @@ class Configurator extends React.PureComponent {
     onHandleFtSliderChange = (e, value) => {
         // this.setState({ ftSlider: value });
         const { eCostFoodSvng } = this.state
-        this.setState({ ftSlider: value, eYearSvng: value * 1337 + eCostFoodSvng});
+        this.setState({ ftSlider: value, eYearSvng: value * 1337 + eCostFoodSvng });
     };
 
     render() {
@@ -48,7 +49,9 @@ class Configurator extends React.PureComponent {
                     handleFtSliderChange={this.onHandleFtSliderChange}
                 />
                 :
-                null
+                <div className="h-100 w-100 d-flex align-items-center justify-content-center">
+                    <MoonLoader sizeUnit={"px"} size={60} color={'#071eb3'} />
+                </div>
         )
     }
 }

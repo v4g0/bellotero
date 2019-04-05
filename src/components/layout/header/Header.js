@@ -1,15 +1,9 @@
 import React from 'react';
 import HeaderItem from './HeaderItem';
 import { connect } from 'react-redux';
-import headerActions from '../../../redux/actions/HeaderActions';
 
 class Header extends React.PureComponent {
 
-    componentDidMount() {
-        const { dispatch } = this.props
-        dispatch(headerActions.getHeader())
-    }
-    
     render() {
         const { getHeader, location } = this.props
         return (
