@@ -70,8 +70,11 @@ Bellotero.io is the digital solution that gives you fast, accurate, automated ac
 ## Install instructions
 
 -Download the project
+
 -install nodejs 
+
 -npm install
+
 -npm run 
 
 ## Demo
