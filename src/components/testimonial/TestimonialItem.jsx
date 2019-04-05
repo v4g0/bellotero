@@ -4,8 +4,8 @@ import './Testimonial.scss';
 
 export default function TestimonialItem(props) {
     return (
-        <Fade left>
-            <div className="testimonial w-100 my-4 my-md-auto">
+        <Fade bottom>
+            <div className="testimonial w-100 my-4 my-lg-auto">
                 <div className="d-flex">
                     <span className="bg-dark-blue text-white h1 p-2 text-center"> <b>{props.slider.title}</b></span>
                 </div>

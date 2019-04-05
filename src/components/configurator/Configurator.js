@@ -6,10 +6,8 @@ import MoonLoader from 'react-spinners/ClipLoader';
 
 class Configurator extends React.PureComponent {
     state = {
-        mtText: 0,
-        mtSlider: 0,
-        ftText: 0,
-        ftSlider: 0,
+        monthly: 10,
+        fullTime: 1,
         eCostFoodSvng: 0,
         eYearSvng: 0
     }
@@ -17,23 +15,38 @@ class Configurator extends React.PureComponent {
     componentDidMount() {
         const { dispatch } = this.props
         dispatch(configuratorActions.getContent())
+        this.setState((prevState) => ({
+            eCostFoodSvng: prevState.monthly * .3,
+            eYearSvng: prevState.fullTime * 1337 + prevState.monthly * .3
+        }));
     }
 
     onHandleTextChange = e => {
-        this.setState({ [e.target.name]: e.target.value });
+        switch (e.target.name) {
+            case "monthly":
+                const monthly = parseInt(e.target.value)
+                const eCostFoodSvng = monthly * .3
+                this.setState({ monthly: monthly, eCostFoodSvng: eCostFoodSvng, eYearSvng: this.state.fullTime * 1337 + eCostFoodSvng });
+                break
+            case "fullTime":
+                const fullTime = parseInt(e.target.value)
+                this.setState({ fullTime: fullTime, eYearSvng: fullTime * 1337 + this.state.eCostFoodSvng });
+                break
+            default:
+                this.setState({ [e.target.name]: parseInt(e.target.value) });
+                break
+        }
     };
 
     onHandleMtSliderChange = (e, value) => {
-        console.log(value)
-        const { ftSlider } = this.state
+        const { fullTime } = this.state
         const eCostFoodSvng = value * .3
-        this.setState({ mtSlider: value, eCostFoodSvng: eCostFoodSvng, eYearSvng: ftSlider * 1337 + eCostFoodSvng });
+        this.setState({ monthly: value, eCostFoodSvng: eCostFoodSvng, eYearSvng: fullTime * 1337 + eCostFoodSvng });
     };
 
     onHandleFtSliderChange = (e, value) => {
-        // this.setState({ ftSlider: value });
         const { eCostFoodSvng } = this.state
-        this.setState({ ftSlider: value, eYearSvng: value * 1337 + eCostFoodSvng });
+        this.setState({ fullTime: value, eYearSvng: value * 1337 + eCostFoodSvng });
     };
 
     render() {
