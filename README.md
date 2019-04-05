@@ -31,7 +31,7 @@ Bellotero.io is the digital solution that gives you fast, accurate, automated ac
 -Calculate Your estimated annual savings = Full-Time Employees * 1337 + Estimated Food Cost Saving
 
 
-## Herramientas para el desarrollo 
+## Deployment tools
 
 -Linux
 
@@ -67,7 +67,7 @@ Bellotero.io is the digital solution that gives you fast, accurate, automated ac
 
 -redux-thunk
 
-## Instrucciones de instalación 
+## Install instructions
 
 -Download the project
 -install nodejs 
