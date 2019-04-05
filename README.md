@@ -12,11 +12,11 @@ Belloterio.io :
 -For app global components,data is pulled from app.json
 -Page 1 is pulled from page1.json
 -Page 2 is pulled from page2.json
-- Functional calculator
-  -Has a monthly ingredient spending using a range between 10-100
-  -Has a Full-Time Employees... use a range between 1-10
-  -Calculate Estimated Food Cost Saving = Monthly ingredient spending * 0.3
-  -Calculate Your estimated annual savings = Full-Time Employees * 1337 + Estimated Food Cost Saving
+-Functional calculator
+-Has a monthly ingredient spending using a range between 10-100
+-Has a Full-Time Employees... use a range between 1-10
+-Calculate Estimated Food Cost Saving = Monthly ingredient spending * 0.3
+-Calculate Your estimated annual savings = Full-Time Employees * 1337 + Estimated Food Cost Saving
 
 ## Herramientas para el desarrollo 
 
