@@ -5,8 +5,7 @@ export default {
 };
 
 function getTestimonial() {
-    // return axios.get(process.env.REACT_APP_GET_HEADER)
-    return axios.get("https://raw.githubusercontent.com/Bernabe-Felix/Bellotero/master/page1.json")
+    return axios.get(process.env.REACT_APP_GET_TESTIMONIAL)
         .then(res => {
             if (res.status == 200) {
                 return Promise.resolve(res.data);

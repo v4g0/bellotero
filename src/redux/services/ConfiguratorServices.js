@@ -5,8 +5,7 @@ export default {
 };
 
 function getContent() {
-    // return axios.get(process.env.REACT_APP_GET_HEADER)
-    return axios.get("https://raw.githubusercontent.com/Bernabe-Felix/Bellotero/master/page2.json")
+    return axios.get(process.env.REACT_APP_GET_CONFIGURATOR_CONTENT)
         .then(res => {
             if (res.status == 200) {
                 return Promise.resolve(res.data);

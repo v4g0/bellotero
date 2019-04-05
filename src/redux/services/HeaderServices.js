@@ -5,8 +5,7 @@ export default {
 };
 
 function getHeader() {
-    // return axios.get(process.env.REACT_APP_GET_HEADER)
-    return axios.get("https://raw.githubusercontent.com/Bernabe-Felix/Bellotero/master/app.json")
+    return axios.get(process.env.REACT_APP_GET_HEADER)
         .then(res => {
             if (res.status == 200) {
                 return Promise.resolve(res.data);
